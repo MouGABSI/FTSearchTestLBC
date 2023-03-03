@@ -19,6 +19,25 @@
 		7D944FC129B1DE5100FB33CA /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FC029B1DE5100FB33CA /* NetworkRequest.swift */; };
 		7D944FC329B1DF7D00FB33CA /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FC229B1DF7D00FB33CA /* JSONParameterEncoder.swift */; };
 		7D944FC529B1DFEC00FB33CA /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FC429B1DFEC00FB33CA /* URLParameterEncoder.swift */; };
+		7D944FCA29B2286800FB33CA /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FC929B2286800FB33CA /* DynamicValue.swift */; };
+		7D944FCC29B2328500FB33CA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FCB29B2328500FB33CA /* ImageLoader.swift */; };
+		7D944FCE29B235D100FB33CA /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FCD29B235D100FB33CA /* TableViewModel.swift */; };
+		7D944FD329B236E100FB33CA /* AnnouncementListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FD229B236E100FB33CA /* AnnouncementListService.swift */; };
+		7D944FD629B2383C00FB33CA /* LBCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FD529B2383C00FB33CA /* LBCCategory.swift */; };
+		7D944FD829B2385800FB33CA /* LBCAnnouncement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FD729B2385800FB33CA /* LBCAnnouncement.swift */; };
+		7D944FDC29B239F900FB33CA /* AnnouncementAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FDB29B239F900FB33CA /* AnnouncementAPIRequest.swift */; };
+		7D944FDF29B23ACB00FB33CA /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FDE29B23ACB00FB33CA /* APIConfig.swift */; };
+		7D944FE129B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FE029B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift */; };
+		7D944FE329B2400800FB33CA /* AnnouncementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FE229B2400800FB33CA /* AnnouncementListViewModel.swift */; };
+		7D944FE529B2402900FB33CA /* AnnouncementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FE429B2402900FB33CA /* AnnouncementListViewController.swift */; };
+		7D944FE829B2405200FB33CA /* AnnouncementListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FE729B2405200FB33CA /* AnnouncementListCell.swift */; };
+		7D944FEA29B2453C00FB33CA /* AnnouncementListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FE929B2453C00FB33CA /* AnnouncementListWorker.swift */; };
+		7D944FEC29B2480400FB33CA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FEB29B2480400FB33CA /* String+Extension.swift */; };
+		7D944FEE29B24DF300FB33CA /* AnnouncementListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FED29B24DF300FB33CA /* AnnouncementListConfigurator.swift */; };
+		7D944FF029B24E8600FB33CA /* AnnouncementListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FEF29B24E8600FB33CA /* AnnouncementListDataSource.swift */; };
+		7D944FF229B251D700FB33CA /* AnnoucementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */; };
+		7D944FF629B2556B00FB33CA /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */; };
+		7D944FF829B2667200FB33CA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF729B2667200FB33CA /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +74,25 @@
 		7D944FC029B1DE5100FB33CA /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		7D944FC229B1DF7D00FB33CA /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		7D944FC429B1DFEC00FB33CA /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		7D944FC929B2286800FB33CA /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		7D944FCB29B2328500FB33CA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		7D944FCD29B235D100FB33CA /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		7D944FD229B236E100FB33CA /* AnnouncementListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListService.swift; sourceTree = "<group>"; };
+		7D944FD529B2383C00FB33CA /* LBCCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCCategory.swift; sourceTree = "<group>"; };
+		7D944FD729B2385800FB33CA /* LBCAnnouncement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCAnnouncement.swift; sourceTree = "<group>"; };
+		7D944FDB29B239F900FB33CA /* AnnouncementAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementAPIRequest.swift; sourceTree = "<group>"; };
+		7D944FDE29B23ACB00FB33CA /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		7D944FE029B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCCategoriesAPIRequest.swift; sourceTree = "<group>"; };
+		7D944FE229B2400800FB33CA /* AnnouncementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListViewModel.swift; sourceTree = "<group>"; };
+		7D944FE429B2402900FB33CA /* AnnouncementListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListViewController.swift; sourceTree = "<group>"; };
+		7D944FE729B2405200FB33CA /* AnnouncementListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListCell.swift; sourceTree = "<group>"; };
+		7D944FE929B2453C00FB33CA /* AnnouncementListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListWorker.swift; sourceTree = "<group>"; };
+		7D944FEB29B2480400FB33CA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7D944FED29B24DF300FB33CA /* AnnouncementListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListConfigurator.swift; sourceTree = "<group>"; };
+		7D944FEF29B24E8600FB33CA /* AnnouncementListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListDataSource.swift; sourceTree = "<group>"; };
+		7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoucementDetailsViewController.swift; sourceTree = "<group>"; };
+		7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		7D944FF729B2667200FB33CA /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +143,9 @@
 		7D944F8A29B120E400FB33CA /* FTSearchTestLBC */ = {
 			isa = PBXGroup;
 			children = (
+				7D944FD429B2382300FB33CA /* Entities */,
+				7D944FCF29B2366100FB33CA /* Scenes */,
+				7D944FC829B2285000FB33CA /* Utils */,
 				7D944FBB29B1DD3900FB33CA /* Network */,
 				7D944F8B29B120E400FB33CA /* AppDelegate.swift */,
 				7D944F8D29B120E400FB33CA /* SceneDelegate.swift */,
@@ -135,13 +176,117 @@
 		7D944FBB29B1DD3900FB33CA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7D944FDD29B23AB600FB33CA /* APIConfig */,
+				7D944FDA29B239D300FB33CA /* APIRequests */,
+				7D944FD929B238E700FB33CA /* Shared */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7D944FC829B2285000FB33CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FC929B2286800FB33CA /* DynamicValue.swift */,
+				7D944FCB29B2328500FB33CA /* ImageLoader.swift */,
+				7D944FCD29B235D100FB33CA /* TableViewModel.swift */,
+				7D944FEB29B2480400FB33CA /* String+Extension.swift */,
+				7D944FF729B2667200FB33CA /* UILabel+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D944FCF29B2366100FB33CA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FD029B2366900FB33CA /* AnnouncementList */,
+				7D944FD129B2367C00FB33CA /* AnnouncementDetails */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7D944FD029B2366900FB33CA /* AnnouncementList */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FF429B2552900FB33CA /* Filter */,
+				7D944FE629B2403300FB33CA /* Cells */,
+				7D944FD229B236E100FB33CA /* AnnouncementListService.swift */,
+				7D944FE229B2400800FB33CA /* AnnouncementListViewModel.swift */,
+				7D944FE429B2402900FB33CA /* AnnouncementListViewController.swift */,
+				7D944FE929B2453C00FB33CA /* AnnouncementListWorker.swift */,
+				7D944FED29B24DF300FB33CA /* AnnouncementListConfigurator.swift */,
+				7D944FEF29B24E8600FB33CA /* AnnouncementListDataSource.swift */,
+			);
+			path = AnnouncementList;
+			sourceTree = "<group>";
+		};
+		7D944FD129B2367C00FB33CA /* AnnouncementDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FF329B2524100FB33CA /* Views */,
+				7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */,
+			);
+			path = AnnouncementDetails;
+			sourceTree = "<group>";
+		};
+		7D944FD429B2382300FB33CA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FD529B2383C00FB33CA /* LBCCategory.swift */,
+				7D944FD729B2385800FB33CA /* LBCAnnouncement.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7D944FD929B238E700FB33CA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
 				7D944FBC29B1DD6600FB33CA /* ParameterEncoderProtocol.swift */,
 				7D944FC229B1DF7D00FB33CA /* JSONParameterEncoder.swift */,
 				7D944FC429B1DFEC00FB33CA /* URLParameterEncoder.swift */,
 				7D944FBE29B1DDF000FB33CA /* NetworkError.swift */,
 				7D944FC029B1DE5100FB33CA /* NetworkRequest.swift */,
 			);
-			path = Network;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7D944FDA29B239D300FB33CA /* APIRequests */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FDB29B239F900FB33CA /* AnnouncementAPIRequest.swift */,
+				7D944FE029B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift */,
+			);
+			path = APIRequests;
+			sourceTree = "<group>";
+		};
+		7D944FDD29B23AB600FB33CA /* APIConfig */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FDE29B23ACB00FB33CA /* APIConfig.swift */,
+			);
+			path = APIConfig;
+			sourceTree = "<group>";
+		};
+		7D944FE629B2403300FB33CA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FE729B2405200FB33CA /* AnnouncementListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7D944FF329B2524100FB33CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D944FF429B2552900FB33CA /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,13 +418,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D944FD829B2385800FB33CA /* LBCAnnouncement.swift in Sources */,
+				7D944FF029B24E8600FB33CA /* AnnouncementListDataSource.swift in Sources */,
 				7D944FC529B1DFEC00FB33CA /* URLParameterEncoder.swift in Sources */,
+				7D944FF229B251D700FB33CA /* AnnoucementDetailsViewController.swift in Sources */,
 				7D944FBD29B1DD6600FB33CA /* ParameterEncoderProtocol.swift in Sources */,
+				7D944FDC29B239F900FB33CA /* AnnouncementAPIRequest.swift in Sources */,
+				7D944FCE29B235D100FB33CA /* TableViewModel.swift in Sources */,
+				7D944FE529B2402900FB33CA /* AnnouncementListViewController.swift in Sources */,
+				7D944FEE29B24DF300FB33CA /* AnnouncementListConfigurator.swift in Sources */,
+				7D944FE329B2400800FB33CA /* AnnouncementListViewModel.swift in Sources */,
+				7D944FE129B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift in Sources */,
+				7D944FCC29B2328500FB33CA /* ImageLoader.swift in Sources */,
+				7D944FD329B236E100FB33CA /* AnnouncementListService.swift in Sources */,
 				7D944F9029B120E400FB33CA /* HomeViewController.swift in Sources */,
+				7D944FD629B2383C00FB33CA /* LBCCategory.swift in Sources */,
+				7D944FEC29B2480400FB33CA /* String+Extension.swift in Sources */,
+				7D944FE829B2405200FB33CA /* AnnouncementListCell.swift in Sources */,
+				7D944FF829B2667200FB33CA /* UILabel+Extension.swift in Sources */,
 				7D944F8C29B120E400FB33CA /* AppDelegate.swift in Sources */,
+				7D944FDF29B23ACB00FB33CA /* APIConfig.swift in Sources */,
+				7D944FEA29B2453C00FB33CA /* AnnouncementListWorker.swift in Sources */,
 				7D944F8E29B120E400FB33CA /* SceneDelegate.swift in Sources */,
+				7D944FF629B2556B00FB33CA /* FilterTableViewController.swift in Sources */,
 				7D944FC129B1DE5100FB33CA /* NetworkRequest.swift in Sources */,
 				7D944FC329B1DF7D00FB33CA /* JSONParameterEncoder.swift in Sources */,
+				7D944FCA29B2286800FB33CA /* DynamicValue.swift in Sources */,
 				7D944FBF29B1DDF000FB33CA /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +604,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENVIRONMENT = DEV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FTSearchTestLBC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FTSearchTestLBC;
@@ -471,6 +636,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENVIRONMENT = PROD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FTSearchTestLBC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FTSearchTestLBC;
