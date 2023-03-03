@@ -42,8 +42,8 @@ class AnnouncementListViewController: UIViewController {
         configureView()
         self.dataSource?.data.addAndNotify(observer: self) { [weak self] in
             DispatchQueue.main.async {
-                self?.announcementTableView.reloadData()
                 self?.setupFilterView()
+                self?.announcementTableView.reloadData()
             }
         }
         fetchAnnounecementOnLoad()
@@ -83,7 +83,13 @@ class AnnouncementListViewController: UIViewController {
     }
     
     func configureView() {
-        view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                return traitCollection.userInterfaceStyle == .dark ? .black : .white
+            }
+        } else {
+            view.backgroundColor = .white
+        }
         
         view.addSubview(announcementTableView)
         

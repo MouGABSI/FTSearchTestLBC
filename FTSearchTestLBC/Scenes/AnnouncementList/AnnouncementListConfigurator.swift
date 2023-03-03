@@ -21,7 +21,7 @@ final class AnnouncementListConfigurator {
 
         let service = AdvertisementListAPIService()
         let dataSource = AnnouncementListDataSource()
-        var viewModel  = AnnouncementListViewModel(dataSource: dataSource)
+        let viewModel  = AnnouncementListViewModel(dataSource: dataSource)
         viewController.dataSource = dataSource
         viewModel.service = service
         viewController.viewModel = viewModel

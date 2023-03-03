@@ -40,6 +40,8 @@ class AnnouncementListViewModel {
                 case .success(let categories) :
                     
                     self.categories = categories
+                    let allCategories = LBCCategory(id: 0, name: "All")
+                    self.categories.insert(allCategories, at: 0)
                     group.leave()
                 case .failure(let error):
                     print("-----> \(error)")
@@ -71,7 +73,7 @@ class AnnouncementListViewModel {
     func getAdvertisement(byCategory category: LBCCategory?) {
         
         var filteredAnnouncements = self.announcements
-        if let _category = category {
+        if let _category = category, _category.id != 0 {
             filteredAnnouncements = announcements.filter({ $0.categoryID == _category.id })
         }
         let worker = AnnouncementListWorker()

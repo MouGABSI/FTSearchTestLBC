@@ -37,6 +37,7 @@
 		7D944FF029B24E8600FB33CA /* AnnouncementListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FEF29B24E8600FB33CA /* AnnouncementListDataSource.swift */; };
 		7D944FF229B251D700FB33CA /* AnnoucementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */; };
 		7D944FF629B2556B00FB33CA /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */; };
+		7D944FF829B2667200FB33CA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF729B2667200FB33CA /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		7D944FEF29B24E8600FB33CA /* AnnouncementListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListDataSource.swift; sourceTree = "<group>"; };
 		7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoucementDetailsViewController.swift; sourceTree = "<group>"; };
 		7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		7D944FF729B2667200FB33CA /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				7D944FCB29B2328500FB33CA /* ImageLoader.swift */,
 				7D944FCD29B235D100FB33CA /* TableViewModel.swift */,
 				7D944FEB29B2480400FB33CA /* String+Extension.swift */,
+				7D944FF729B2667200FB33CA /* UILabel+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				7D944FD629B2383C00FB33CA /* LBCCategory.swift in Sources */,
 				7D944FEC29B2480400FB33CA /* String+Extension.swift in Sources */,
 				7D944FE829B2405200FB33CA /* AnnouncementListCell.swift in Sources */,
+				7D944FF829B2667200FB33CA /* UILabel+Extension.swift in Sources */,
 				7D944F8C29B120E400FB33CA /* AppDelegate.swift in Sources */,
 				7D944FDF29B23ACB00FB33CA /* APIConfig.swift in Sources */,
 				7D944FEA29B2453C00FB33CA /* AnnouncementListWorker.swift in Sources */,

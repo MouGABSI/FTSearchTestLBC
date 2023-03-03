@@ -137,8 +137,11 @@ class AnnouncementListCell: UITableViewCell {
     
     func configure(model: AnnouncementRowViewModel) {
         titleLabel.text       = model.title
+        titleLabel.setDynamicTextColor()
         categoryLabel.text   = model.category.name
+        categoryLabel.setDynamicTextColor()
         priceLabel.text      = "\(model.price)"
+        priceLabel.setDynamicTextColor()
         urgentLabel.text     = "Urgent"
         urgentLabel.textAlignment = .center
         urgentLabel.backgroundColor = UIColor(red: 238.0/255.0, green: 104.0/255.0, blue: 40.0/255.0, alpha: 1.0)

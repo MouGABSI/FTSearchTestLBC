@@ -81,6 +81,17 @@ class AnnoucementDetailsViewController: UIViewController {
         configureUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                return traitCollection.userInterfaceStyle == .dark ? .black : .white
+            }
+        } else {
+            view.backgroundColor = .white
+        }
+    }
+    
     func configureUI() {
         configureScrollView()
         configureTitleLabel()
@@ -92,8 +103,6 @@ class AnnoucementDetailsViewController: UIViewController {
     }
     
     func configureScrollView() {
-        
-        view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -128,7 +137,7 @@ class AnnoucementDetailsViewController: UIViewController {
         scrollViewContentView.addSubview(titleLabel)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
+        titleLabel.setDynamicTextColor()
         titleLabel.topAnchor.constraint(equalTo: scrollViewContentView.topAnchor, constant: 30).isActive            = true
         titleLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 20).isActive    = true
         titleLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -20).isActive = true
@@ -142,7 +151,7 @@ class AnnoucementDetailsViewController: UIViewController {
         scrollViewContentView.addSubview(categoryLabel)
         categoryLabel.numberOfLines = 0
         categoryLabel.textAlignment = .center
-        categoryLabel.textColor = .black
+        categoryLabel.setDynamicTextColor()
         categoryLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20).isActive                    = true
         categoryLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 30).isActive    = true
         categoryLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -30).isActive = true
@@ -156,7 +165,7 @@ class AnnoucementDetailsViewController: UIViewController {
         scrollViewContentView.addSubview(priceLabel)
         priceLabel.numberOfLines = 1
         priceLabel.textAlignment = .center
-        priceLabel.textColor = .black
+        priceLabel.setDynamicTextColor()
         priceLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 20).isActive                          = true
         priceLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 80).isActive    = true
         priceLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -80).isActive = true
@@ -171,7 +180,7 @@ class AnnoucementDetailsViewController: UIViewController {
         scrollViewContentView.addSubview(descriptionLabel)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left
-        descriptionLabel.textColor = .black
+        descriptionLabel.setDynamicTextColor()
         descriptionLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 20).isActive                 = true
         descriptionLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 30).isActive    = true
         descriptionLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -30).isActive = true
