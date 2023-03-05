@@ -38,6 +38,11 @@
 		7D944FF229B251D700FB33CA /* AnnoucementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */; };
 		7D944FF629B2556B00FB33CA /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */; };
 		7D944FF829B2667200FB33CA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FF729B2667200FB33CA /* UILabel+Extension.swift */; };
+		7D944FFD29B486AA00FB33CA /* AnnouncementListServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FFC29B486AA00FB33CA /* AnnouncementListServiceMock.swift */; };
+		7D944FFF29B4982300FB33CA /* AnnouncementListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FFE29B4982300FB33CA /* AnnouncementListViewModelTests.swift */; };
+		7D94500229B49B4100FB33CA /* AnnouncementListAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94500129B49B4100FB33CA /* AnnouncementListAPIServiceTests.swift */; };
+		7D94500429B49D5100FB33CA /* AnnouncementListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94500329B49D5100FB33CA /* AnnouncementListWorkerTests.swift */; };
+		7D94500C29B5228000FB33CA /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D94500B29B5228000FB33CA /* UIColor+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoucementDetailsViewController.swift; sourceTree = "<group>"; };
 		7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		7D944FF729B2667200FB33CA /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		7D944FFC29B486AA00FB33CA /* AnnouncementListServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListServiceMock.swift; sourceTree = "<group>"; };
+		7D944FFE29B4982300FB33CA /* AnnouncementListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListViewModelTests.swift; sourceTree = "<group>"; };
+		7D94500129B49B4100FB33CA /* AnnouncementListAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListAPIServiceTests.swift; sourceTree = "<group>"; };
+		7D94500329B49D5100FB33CA /* AnnouncementListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementListWorkerTests.swift; sourceTree = "<group>"; };
+		7D94500B29B5228000FB33CA /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +169,11 @@
 		7D944FA129B120E500FB33CA /* FTSearchTestLBCTests */ = {
 			isa = PBXGroup;
 			children = (
+				7D944FFB29B4865900FB33CA /* Mock */,
 				7D944FA229B120E500FB33CA /* FTSearchTestLBCTests.swift */,
+				7D944FFE29B4982300FB33CA /* AnnouncementListViewModelTests.swift */,
+				7D94500129B49B4100FB33CA /* AnnouncementListAPIServiceTests.swift */,
+				7D94500329B49D5100FB33CA /* AnnouncementListWorkerTests.swift */,
 			);
 			path = FTSearchTestLBCTests;
 			sourceTree = "<group>";
@@ -191,6 +205,7 @@
 				7D944FCD29B235D100FB33CA /* TableViewModel.swift */,
 				7D944FEB29B2480400FB33CA /* String+Extension.swift */,
 				7D944FF729B2667200FB33CA /* UILabel+Extension.swift */,
+				7D94500B29B5228000FB33CA /* UIColor+extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,7 +237,6 @@
 		7D944FD129B2367C00FB33CA /* AnnouncementDetails */ = {
 			isa = PBXGroup;
 			children = (
-				7D944FF329B2524100FB33CA /* Views */,
 				7D944FF129B251D700FB33CA /* AnnoucementDetailsViewController.swift */,
 			);
 			path = AnnouncementDetails;
@@ -274,19 +288,20 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		7D944FF329B2524100FB33CA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		7D944FF429B2552900FB33CA /* Filter */ = {
 			isa = PBXGroup;
 			children = (
 				7D944FF529B2556B00FB33CA /* FilterTableViewController.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		7D944FFB29B4865900FB33CA /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7D944FFC29B486AA00FB33CA /* AnnouncementListServiceMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +436,7 @@
 				7D944FD829B2385800FB33CA /* LBCAnnouncement.swift in Sources */,
 				7D944FF029B24E8600FB33CA /* AnnouncementListDataSource.swift in Sources */,
 				7D944FC529B1DFEC00FB33CA /* URLParameterEncoder.swift in Sources */,
+				7D94500C29B5228000FB33CA /* UIColor+extension.swift in Sources */,
 				7D944FF229B251D700FB33CA /* AnnoucementDetailsViewController.swift in Sources */,
 				7D944FBD29B1DD6600FB33CA /* ParameterEncoderProtocol.swift in Sources */,
 				7D944FDC29B239F900FB33CA /* AnnouncementAPIRequest.swift in Sources */,
@@ -452,7 +468,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D944FFD29B486AA00FB33CA /* AnnouncementListServiceMock.swift in Sources */,
+				7D94500429B49D5100FB33CA /* AnnouncementListWorkerTests.swift in Sources */,
+				7D94500229B49B4100FB33CA /* AnnouncementListAPIServiceTests.swift in Sources */,
 				7D944FA329B120E500FB33CA /* FTSearchTestLBCTests.swift in Sources */,
+				7D944FFF29B4982300FB33CA /* AnnouncementListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

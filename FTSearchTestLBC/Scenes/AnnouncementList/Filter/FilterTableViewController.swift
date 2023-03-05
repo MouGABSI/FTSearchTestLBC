@@ -12,7 +12,7 @@ class FilterTableViewController<Element> : UITableViewController where Element: 
     typealias SelectionHandler = (Element) -> Void
     typealias LabelProvider = (Element) -> String
     
-    private let values : [Element]
+    private var values : [Element]
     private let labels : LabelProvider
     private let onSelect : SelectionHandler?
     
@@ -28,6 +28,11 @@ class FilterTableViewController<Element> : UITableViewController where Element: 
         self.onSelect = onSelect
         self.labels = labels
         super.init(style: .plain)
+    }
+    
+    func refreshValues(newValues: [Element]) {
+        self.values = newValues
+        tableView.reloadData()
     }
     
     required init?(coder aDecoder: NSCoder) {

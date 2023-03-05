@@ -12,7 +12,7 @@ protocol AnnouncementListServiceProtocol {
     func fetchCategories(completion: @escaping (Result<[LBCCategory], NetworkError>) -> Void)
 }
 
-struct AdvertisementListAPIService: AnnouncementListServiceProtocol {
+struct AnnouncementListAPIService: AnnouncementListServiceProtocol {
     func fetchAnnouncementList(completion: @escaping (Result<[Announcement], NetworkError>) -> Void) {
         NetworkSession<AnnouncementAPIRequest>().sendRequest(AnnouncementAPIRequest(), completion: completion)
     }

@@ -8,8 +8,8 @@
 import Foundation
 
 struct AnnouncementListWorker {
-    func generateSectionsViewModel(announcement: [Announcement]) -> [AnnouncementSectionViewModel] {
-        let sortedAnnouncements = announcement.sorted { ($0.createdOn ?? Date()) > ($1.createdOn ?? Date()) }.sorted{$0.isUrgent && !$1.isUrgent}
+    func generateSectionsViewModel(announcements: [Announcement]) -> [AnnouncementSectionViewModel] {
+        let sortedAnnouncements = announcements.sorted { ($0.createdOn ?? Date()) > ($1.createdOn ?? Date()) }.sorted{$0.isUrgent && !$1.isUrgent}
         let rows = sortedAnnouncements.map { (announcement) -> AnnouncementRowViewModel in
             AnnouncementRowViewModel(identifier: announcement.id,
                                       title: announcement.title,

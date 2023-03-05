@@ -150,10 +150,10 @@ class AnnoucementDetailsViewController: UIViewController {
     func configureCategoryLabel() {
         scrollViewContentView.addSubview(categoryLabel)
         categoryLabel.numberOfLines = 0
-        categoryLabel.textAlignment = .center
+        categoryLabel.textAlignment = .left
         categoryLabel.setDynamicTextColor()
-        categoryLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 20).isActive                    = true
-        categoryLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 30).isActive    = true
+        categoryLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 10).isActive                    = true
+        categoryLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 20).isActive    = true
         categoryLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -30).isActive = true
         categoryLabel.text = currentAnnouncement?.categoryName
         view.setNeedsLayout()
@@ -164,13 +164,13 @@ class AnnoucementDetailsViewController: UIViewController {
     func configurePriceLabel() {
         scrollViewContentView.addSubview(priceLabel)
         priceLabel.numberOfLines = 1
-        priceLabel.textAlignment = .center
-        priceLabel.setDynamicTextColor()
+        priceLabel.textAlignment = .left
+        priceLabel.textColor = UIColor().lbcOrange
         priceLabel.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 20).isActive                          = true
-        priceLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 80).isActive    = true
+        priceLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 20).isActive    = true
         priceLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -80).isActive = true
         priceLabel.heightAnchor.constraint(equalToConstant: 28).isActive                                            = true
-        priceLabel.text = "\(currentAnnouncement?.price ?? 0)"
+        priceLabel.text = "\(currentAnnouncement?.price ?? 0)€"
         view.setNeedsLayout()
         view.layoutIfNeeded()
         
@@ -181,8 +181,8 @@ class AnnoucementDetailsViewController: UIViewController {
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left
         descriptionLabel.setDynamicTextColor()
-        descriptionLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 20).isActive                 = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 30).isActive    = true
+        descriptionLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 15).isActive                 = true
+        descriptionLabel.leadingAnchor.constraint(equalTo: scrollViewContentView.leadingAnchor, constant: 20).isActive    = true
         descriptionLabel.trailingAnchor.constraint(equalTo: scrollViewContentView.trailingAnchor, constant: -30).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: scrollViewContentView.bottomAnchor, constant: -20).isActive     = true
         descriptionLabel.text = currentAnnouncement?.announcementDescription

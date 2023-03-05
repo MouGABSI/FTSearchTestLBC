@@ -14,8 +14,6 @@ class ImageLoader {
     
     // Asynchronously download an image from a URL
     class func image(for url: URL, completionHandler: @escaping(_ image: UIImage?) -> ()) {
-        
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
             
             // Check if the image data is already in the cache
             if let data = self.cache.object(forKey: url.absoluteString as NSString) {
@@ -42,9 +40,6 @@ class ImageLoader {
                 DispatchQueue.main.async { completionHandler(UIImage(data: data as Data)) }
             }
             task.resume()
-            
-            
-        }
     }
     
 }
