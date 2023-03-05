@@ -19,11 +19,13 @@ final class AnnouncementListConfigurator {
 
     func configure(viewController: AnnouncementListViewController) {
 
-        let service = AdvertisementListAPIService()
+        let service = AnnouncementListAPIService()
         let dataSource = AnnouncementListDataSource()
-        let viewModel  = AnnouncementListViewModel(dataSource: dataSource)
+        let isLoading = DynamicValue(false)
+        let viewModel  = AnnouncementListViewModel(service: service, worker: AnnouncementListWorker(), isLoading: isLoading)
+        viewModel.dataSource = dataSource
+        viewModel.isLoading = isLoading
         viewController.dataSource = dataSource
-        viewModel.service = service
         viewController.viewModel = viewModel
         
     }

@@ -11,7 +11,7 @@ struct Announcement: Codable {
     let id, categoryID: Int
     var categoryName: String?
     let title, announcementDescription: String
-    let price: Double
+    let price: Int
     let imagesURL: ImageURL
     let creationDate: String?
     let isUrgent: Bool

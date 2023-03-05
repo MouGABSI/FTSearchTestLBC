@@ -7,26 +7,40 @@
 
 import UIKit
 
-class AnnouncementListViewModel {
-    var service: AnnouncementListServiceProtocol?
+protocol AnnouncementListViewModelProtocol {
+    var dataSource : GenericDataSource<TableSectionViewModel>? { get set }
+    var announcements: [Announcement] { get }
+    var categories: DynamicValue<[LBCCategory]> { get }
+    var isLoading: DynamicValue<Bool> { get }
+    func fetchData()
+    func getAnnouncements(byCategory category: LBCCategory?)
+}
+
+class AnnouncementListViewModel: AnnouncementListViewModelProtocol {
     
-    weak var dataSource : GenericDataSource<TableSectionViewModel>?
+    private let service: AnnouncementListServiceProtocol?
+    private let worker: AnnouncementListWorker
+    var categories: DynamicValue<[LBCCategory]> = DynamicValue([])
+    weak var dataSource: GenericDataSource<TableSectionViewModel>?
+    var isLoading: DynamicValue<Bool>
     var announcements: [Announcement] = []
-    var categories: [LBCCategory] = []
     
-    init(dataSource : GenericDataSource<TableSectionViewModel>?) {
-        self.dataSource = dataSource
+    init(service: AnnouncementListServiceProtocol, worker: AnnouncementListWorker, isLoading: DynamicValue<Bool>) {
+        self.service = service
+        self.worker = worker
+        self.isLoading = isLoading
     }
     
-    func fetchAnnouncements() {
+    func fetchData() {
         let group = DispatchGroup()
         group.enter()
+        isLoading.value = true
         service?.fetchAnnouncementList(completion: { (result:Result<[Announcement], NetworkError>) in
             switch result {
                 case .success(let announcements) :
                     self.announcements = announcements.sorted { ($0.createdOn ?? Date()) > ($1.createdOn ?? Date()) }.sorted{$0.isUrgent && !$1.isUrgent}
                     let worker = AnnouncementListWorker()
-                    let sections = worker.generateSectionsViewModel(announcement: announcements)
+                    let sections = worker.generateSectionsViewModel(announcements: announcements)
                     self.dataSource?.data.value = sections
                     group.leave()
                 case .failure(let error):
@@ -39,9 +53,10 @@ class AnnouncementListViewModel {
             switch result {
                 case .success(let categories) :
                     
-                    self.categories = categories
-                    let allCategories = LBCCategory(id: 0, name: "All")
-                    self.categories.insert(allCategories, at: 0)
+                    var allCategories = categories
+                    let allCategory = LBCCategory(id: 0, name: "All")
+                    allCategories.insert(allCategory, at: 0)
+                    self.categories.value = allCategories
                     group.leave()
                 case .failure(let error):
                     print("-----> \(error)")
@@ -53,31 +68,30 @@ class AnnouncementListViewModel {
             guard let self = self else {
                 return
             }
-            // this code will be executed when both methods have completed
-            print("Both methods completed")
-            print("categories -----> \(self.categories)")
-            print("announcements -----> \(self.announcements)")
-            self.setCategoryForAnnoucement(self.categories)
+            self.isLoading.value = false
+            self.setCategoryForAnnouncements(self.categories.value)
+            let worker = AnnouncementListWorker()
+            let sections = worker.generateSectionsViewModel(announcements: self.announcements)
+            self.dataSource?.data.value = sections
         }
     }
     
-    internal func setCategoryForAnnoucement(_ categories: [LBCCategory]) {
-        self.announcements = self.announcements.map({ (announcement) -> Announcement in
+    private func setCategoryForAnnouncements(_ categories: [LBCCategory]) {
+        announcements = announcements.map { (announcement) in
             var item = announcement
-            let category = categories.first { return $0.id == announcement.categoryID}
+            let category = categories.first { $0.id == announcement.categoryID }
             item.categoryName = category?.name
             return item
-        })
+        }
     }
     
-    func getAdvertisement(byCategory category: LBCCategory?) {
-        
+    func getAnnouncements(byCategory category: LBCCategory?) {
         var filteredAnnouncements = self.announcements
         if let _category = category, _category.id != 0 {
             filteredAnnouncements = announcements.filter({ $0.categoryID == _category.id })
         }
         let worker = AnnouncementListWorker()
-        let sections = worker.generateSectionsViewModel(announcement: filteredAnnouncements)
+        let sections = worker.generateSectionsViewModel(announcements: filteredAnnouncements)
         self.dataSource?.data.value = sections
     }
 }
@@ -95,7 +109,7 @@ struct AnnouncementRowViewModel: TableRowViewModel {
     var identifier: Int
     var title: String
     var category: LBCCategory
-    var price: Double
+    var price: Int
     var images: ImageURL
     var isUrgent: Bool
     func configure(_ cell: UITableViewCell) {

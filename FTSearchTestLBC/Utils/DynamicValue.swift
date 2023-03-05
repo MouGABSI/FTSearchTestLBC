@@ -6,7 +6,6 @@
 //
 
 import Foundation
-typealias CompletionHandler = (() -> Void)
 /**
  A class that wraps a value of a given type and allows observers to be notified when the value changes.
  
@@ -19,7 +18,7 @@ typealias CompletionHandler = (() -> Void)
  // Output: "The value has changed to World"
  */
 class DynamicValue<T> {
-    
+    typealias CompletionHandler = ((T?) -> Void)
     /// The wrapped value.
     var value: T {
         didSet {
@@ -64,7 +63,7 @@ class DynamicValue<T> {
         //remove any observers that have been deallocated.
         observers = observers.filter { $0.key.value != nil }
         //call the completion handler of each non deallocated observer
-        observers.forEach { $0.value() }
+        observers.forEach { $0.value(value) }
     }
     /**
      Removes all observers from the dictionary when the `DynamicValue` object is deallocated.
