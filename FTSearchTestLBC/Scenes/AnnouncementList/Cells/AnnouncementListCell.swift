@@ -98,14 +98,11 @@ class AnnouncementListCell: UITableViewCell {
         urgentLabel.isHidden = !model.isUrgent
         
         if let iconUrString = model.images.small, let iconURL = URL(string: iconUrString) {
-            print("Image URL ----> \(iconURL)")
             ImageLoader.image(for: iconURL) { image in
                 DispatchQueue.main.async { [weak self] in
                     self?.icon.image = image
                 }
             }
-        } else {
-            print("Image is Nil")
         }
     }
     
