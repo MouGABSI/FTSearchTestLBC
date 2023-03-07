@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7D944F8C29B120E400FB33CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944F8B29B120E400FB33CA /* AppDelegate.swift */; };
 		7D944F8E29B120E400FB33CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944F8D29B120E400FB33CA /* SceneDelegate.swift */; };
-		7D944F9029B120E400FB33CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944F8F29B120E400FB33CA /* HomeViewController.swift */; };
 		7D944F9529B120E500FB33CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D944F9429B120E500FB33CA /* Assets.xcassets */; };
 		7D944FA329B120E500FB33CA /* FTSearchTestLBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FA229B120E500FB33CA /* FTSearchTestLBCTests.swift */; };
 		7D944FAD29B120E500FB33CA /* FTSearchTestLBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D944FAC29B120E500FB33CA /* FTSearchTestLBCUITests.swift */; };
@@ -66,7 +65,6 @@
 		7D944F8829B120E400FB33CA /* FTSearchTestLBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTSearchTestLBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D944F8B29B120E400FB33CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D944F8D29B120E400FB33CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D944F8F29B120E400FB33CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7D944F9429B120E500FB33CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D944F9929B120E500FB33CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D944F9E29B120E500FB33CA /* FTSearchTestLBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTSearchTestLBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +157,6 @@
 				7D944FBB29B1DD3900FB33CA /* Network */,
 				7D944F8B29B120E400FB33CA /* AppDelegate.swift */,
 				7D944F8D29B120E400FB33CA /* SceneDelegate.swift */,
-				7D944F8F29B120E400FB33CA /* HomeViewController.swift */,
 				7D944F9429B120E500FB33CA /* Assets.xcassets */,
 				7D944F9929B120E500FB33CA /* Info.plist */,
 			);
@@ -447,7 +444,6 @@
 				7D944FE129B23EFE00FB33CA /* LBCCategoriesAPIRequest.swift in Sources */,
 				7D944FCC29B2328500FB33CA /* ImageLoader.swift in Sources */,
 				7D944FD329B236E100FB33CA /* AnnouncementListService.swift in Sources */,
-				7D944F9029B120E400FB33CA /* HomeViewController.swift in Sources */,
 				7D944FD629B2383C00FB33CA /* LBCCategory.swift in Sources */,
 				7D944FEC29B2480400FB33CA /* String+Extension.swift in Sources */,
 				7D944FE829B2405200FB33CA /* AnnouncementListCell.swift in Sources */,
