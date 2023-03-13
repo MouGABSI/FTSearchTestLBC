@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnnouncementAPIRequest: NetworkRequest {
+struct AnnouncementAPIRequest: Requestable {
     var urlString: String {
          return APIConfig.shared.scheme.rawValue + APIConfig.shared.baseUrl
     }

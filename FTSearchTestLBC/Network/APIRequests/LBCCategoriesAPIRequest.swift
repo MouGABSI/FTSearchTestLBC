@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LBCCategoriesAPIRequest: NetworkRequest {
+struct LBCCategoriesAPIRequest: Requestable {
     var urlString: String {
          return APIConfig.shared.scheme.rawValue + APIConfig.shared.baseUrl
     }
