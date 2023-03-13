@@ -14,11 +14,11 @@ protocol AnnouncementListServiceProtocol {
 
 struct AnnouncementListAPIService: AnnouncementListServiceProtocol {
     func fetchAnnouncementList(completion: @escaping (Result<[Announcement], NetworkError>) -> Void) {
-        NetworkSession<AnnouncementAPIRequest>().sendRequest(AnnouncementAPIRequest(), completion: completion)
+        NetworkSession().sendRequest(AnnouncementAPIRequest(), completion: completion)
     }
     
     func fetchCategories(completion: @escaping (Result<[LBCCategory], NetworkError>) -> Void) {
-        NetworkSession<LBCCategoriesAPIRequest>().sendRequest(LBCCategoriesAPIRequest(), completion: completion)
+        NetworkSession().sendRequest(LBCCategoriesAPIRequest(), completion: completion)
     }
     
 }

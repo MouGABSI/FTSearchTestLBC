@@ -15,7 +15,7 @@ public enum HttpMethod : String {
     case patch   = "PATCH"
 }
 
-public protocol NetworkRequest {
+public protocol Requestable {
     var baseURL: URL? { get }
     var path: String? { get }
     var method: HttpMethod? { get }
@@ -31,12 +31,17 @@ public protocol RetryPolicy {
 }
 
 public protocol NetworkSessionProtocol {
-    associatedtype EndPoint: NetworkRequest
+    associatedtype EndPoint: Requestable
     func sendRequest<T>(_ request: EndPoint, completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable
     func buildURLRequest(from request: EndPoint) throws -> URLRequest?
 }
 
-struct NetworkSession<EndPoint:NetworkRequest>: NetworkSessionProtocol {
+struct NetworkSession<EndPoint:Requestable>: NetworkSessionProtocol {
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
     
     func sendRequest<T>(_ request: EndPoint, completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable {
         do {
@@ -53,7 +58,7 @@ struct NetworkSession<EndPoint:NetworkRequest>: NetworkSessionProtocol {
     }
     
     private func send<T: Decodable>(_ urlRequest: URLRequest, retriesLeft: Int, retryInterval: TimeInterval, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+        session.dataTask(with: urlRequest) { data, response, error in
             if let error = error {
                 if retriesLeft > 0 {
                     DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) {
