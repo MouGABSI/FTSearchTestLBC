@@ -17,7 +17,7 @@ final class AnnouncementListViewModelTests: XCTestCase {
         super.setUp()
         let service = AnnouncementListServiceMock()
         let worker = AnnouncementListWorker()
-        viewModel = AnnouncementListViewModel(service: service, worker: worker)
+        viewModel = AnnouncementListViewModel(service: service, worker: worker, isLoading: DynamicValue(false))
         dataSource = GenericDataSource<TableSectionViewModel>()
         viewModel.dataSource = dataSource
     }
@@ -30,7 +30,7 @@ final class AnnouncementListViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch data expectation")
         viewModel.fetchData()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            XCTAssertEqual(self.viewModel.categories.value.count, 12, "Categories count should be 12")
+            XCTAssertEqual(self.viewModel.categories.value.count, 13, "Categories count should be 13")
             XCTAssertEqual(self.viewModel.announcements.count, 3, "Announcement List should contains only 3 announcement")
             XCTAssertGreaterThan(self.dataSource.data.value.count, 0)
             expectation.fulfill()
