@@ -17,7 +17,7 @@ final class AnnouncementListWorkerTests: XCTestCase {
         super.setUp()
         let service = AnnouncementListServiceMock()
         let worker = AnnouncementListWorker()
-        viewModel = AnnouncementListViewModel(service: service, worker: worker)
+        viewModel = AnnouncementListViewModel(service: service, worker: worker, isLoading: DynamicValue(false))
         dataSource = GenericDataSource<TableSectionViewModel>()
         viewModel.dataSource = dataSource
     }
@@ -40,8 +40,9 @@ final class AnnouncementListWorkerTests: XCTestCase {
             print("sections ----> \(sections)")
             XCTAssertTrue(firstRow is AnnouncementRowViewModel, "FirstRow should not be an AnnouncementRowViewModel")
             let firstAnnouncementRowVM = firstRow as! AnnouncementRowViewModel
+            let lastRowVM = lastRow as! AnnouncementRowViewModel
             XCTAssertTrue(firstAnnouncementRowVM.isUrgent, "First Announcement should be urgent")
-            XCTAssertFalse(firstAnnouncementRowVM.isUrgent, "Last Announcement Should not be urgent!")
+            XCTAssertFalse(lastRowVM.isUrgent, "Last Announcement Should not be urgent!")
             XCTAssertEqual(firstAnnouncementRowVM.title, "Statue homme noir assis en plâtre polychrome")
             XCTAssertEqual(firstAnnouncementRowVM.category.name, "Maison")
             expectation.fulfill()
